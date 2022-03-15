@@ -169,6 +169,27 @@ class Character extends FlxSprite
 				healthbarColor = FlxColor.fromRGB(102,243,255);
 
 				playAnim('danceRight');
+		    case 'spooky 1':
+				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets-1');
+				frames = tex;
+				animation.addByPrefix('singUP', 'spooky UP NOTE', 24, false);
+				animation.addByPrefix('singDOWN', 'spooky DOWN note', 24, false);
+				animation.addByPrefix('singLEFT', 'note sing left', 24, false);
+				animation.addByPrefix('singRIGHT', 'spooky sing right', 24, false);
+				animation.addByIndices('danceLeft', 'spooky dance idle', [0, 2, 6], "", 12, false);
+				animation.addByIndices('danceRight', 'spooky dance idle', [8, 10, 12, 14], "", 12, false);
+
+				addOffset('danceLeft');
+				addOffset('danceRight');
+
+				addOffset("singUP", -20, 26);
+				addOffset("singRIGHT", -130, -14);
+				addOffset("singLEFT", 130, -10);
+				addOffset("singDOWN", -50, -130);
+
+				healthbarColor = FlxColor.fromRGB(102,243,255);
+
+				playAnim('danceRight');
 			case 'mom':
 				tex = Paths.getSparrowAtlas('characters/mommyMustMurder');
 				frames = tex;
